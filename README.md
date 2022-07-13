@@ -236,5 +236,7 @@ https://lwn.net/Articles/403891/
 
 https://linuxtv.org/downloads/v4l-dvb-internals/device-drivers/ch01s06.html
 
+https://docs.google.com/document/d/1mMS2EBXc_LJvdEcHo5baruvx2LRNE9P5_t3ZQHoaErM/edit
+
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
