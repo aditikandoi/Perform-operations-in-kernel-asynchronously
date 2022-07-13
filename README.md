@@ -1,66 +1,68 @@
-Group ID: 15
-Group Members: Aditi Raj Kandoi, Swetang Finviya, Yash Jetwani
+#### Group ID: 15
+#### Group Members: Aditi Raj Kandoi, Swetang Finviya, Yash Jetwani
 
 We have also submitted a separate detailed design doc as: CSE-506/desgin.pdf
-and a complete flowchart design of our kernel APIs as: Kernel_API_Flowchart.pdf
-Submission branch: master-submission
+</br> and a complete flowchart design of our kernel APIs as: Kernel_API_Flowchart.pdf
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+-----
 
 Our submission contains following files and folders:
 
-Makefile
-install_module.sh
-kernel.config
-async_ops_module.c
-async_ops_module.h
-async_ops.c
-async_ops.h
-test-scripts
-run_all_tests.sh
+1. Makefile
+2. install_module.sh
+3. kernel.config
+4. async_ops_module.c
+5. async_ops_module.h
+6. async_ops.c
+7. async_ops.h
+8. test-scripts
+9. run_all_tests.sh
 
-Makefile:
+----- 
+
+**Makefile:**
 	Contains commands to build and compile module as well as user level code.
 
-install_module.sh:
+**install_module.sh:**
     Shell script to insert newly compiled async_ops_module.ko module and remove previously installed version of the module, if any.
 
-kernel.config:
+**kernel.config:**
 	Contains kernel configuration used for booting the kernel (We need some compression and crypto modules over vanilla which are included in this kernel config, should be used as Linux's .config while making kernel)
 
-async_ops_module.c:
+**async_ops_module.c:**
 	Contains kernel side workqueue APIs and operation code
 
-async_ops_module.h: 
+**async_ops_module.h:**
 	Header file for async_ops_module.c
 
-async_ops.c:
+**async_ops.c:**
     Contains user level code for handling command line arguments and communicating with the kernel module async_ops_module
 
-async_ops.h:
+**async_ops.h:**
 	Header file for async_ops.c, shared by kernel module to refer input and return structs
 
-test_scripts:
+**test_scripts:**
 	Folder containing all the unit and integrating tests
 
-run_all_tests:
+**run_all_tests:**
 	Bash script to run all the test scripts present in test_scripts folder
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+----
 
-Steps to build and compile async_ops_module(kernel module) and async_ops(user level code)
-Go to the folder /usr/src/hw3-cse506g15/CSE-506
-Run the following command: sudo make
-Run the following command: sudo sh install_module.sh
+**Steps to build and compile async_ops_module(kernel module) and async_ops(user level code)**<br>
+Go to the folder /usr/src/hw3-cse506g15/CSE-506<br>
+Run the following command: sudo make<br>
+Run the following command: sudo sh install_module.sh<br>
 
 Job types supported by the work queue:
-Delete multiple files
-Rename multiple files
-Concatenate multiple files
-stat() multiple files
-Calculate hash of a file
-Encrypt or decrypt a file
-Compress or decompress a file
+- Delete multiple files
+- Rename multiple files
+- Concatenate multiple files
+- stat() multiple files
+- Calculate hash of a file
+- Encrypt or decrypt a file
+- Compress or decompress a file
 
 Job types usage and description—
 
@@ -135,9 +137,9 @@ For decryption, if the wrong key is used then the error -EKEYREJECTED will be re
 
 This command will compress/decompress the content present in file1.txt and store the compressed/decompressed  content in file2.txt. lz4 algorithm is used for this purpose.
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+-----
 
-Kernel Queue APIs supported —
+**Kernel Queue APIs supported** 
 
 1. Submitting a job
 
@@ -211,16 +213,16 @@ Kernel Queue APIs supported —
 
 ALL the above APIs have user id filtering, ie. only jobs owned by user are visible to them in return responses of all APIs.
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+-----
 
-Future Developments —
+**Future Developments**
 
 1. We plan to introduce submitting jobs using shell script (Slurm standard). This method could be used to automate job submission and timer activities.
 2. We plan to provide a time analytics API which will contain lifetime information of a job — Time spent in pending state on queue, time on CPU, total time it took to reach COMPLETED state etc. This API can be used to increase system efficiency.
 
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+----
 
-References —
+**References**
 
 https://kernelnewbies.org/FAQ/LinkedLists
 
