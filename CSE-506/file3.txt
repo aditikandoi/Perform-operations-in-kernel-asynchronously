@@ -1,0 +1,8 @@
+./test-scripts/unit-test/delete_op.sh
+./test-scripts/unit-test/rename_op.sh
+./test-scripts/unit-test/concat_op.sh
+./test-scripts/unit-test/stat_op.sh
+./test-scripts/unit-test/delete_job.sh
+./test-scripts/unit-test/enc_dec_op.sh
+./test-scripts/unit-test/hash_op.sh
+./test-scripts/unit-test/comp_dec_op.sh
